@@ -3,7 +3,20 @@
     <head>
         <title>first</title>
     </head>
-    <body>
-        <h1>My Prac 4 Express Server</h1>
-    </body>
+    <body onload="last()">
+    <h1>My Prac 4 Express Server</h1>
+    <p id="lastTime"></p>
+    <script>
+        var Time = document.getElementById("lastTime");  
+        var xhttp = new XMLHttpRequest();
+        function last() {
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200){
+                    Time.innerHTML = "This page was last viewed " + new Date().toString();
+                }
+            };
+            xhttp.open("GET", "/last.txt", true);
+            xhttp.send();
+        }
+    </script>
 </html>
