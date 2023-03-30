@@ -26,4 +26,25 @@ router.get('/log.html', function(req, res, next){
   }
 });
 
+router.use(express.static('public'));
+var count = 0;
+router.get('/color.txt', function(req, res){
+  var color="";
+  count++;
+  if(count == 1){
+    color= "red";
+  }
+  else if(count == 2){
+    color= "yellow";
+  }
+  else if(count == 3){
+    color= "green";
+  }
+  else if(count == 4){
+    color= "blue";
+    count = 0;
+  }
+  res.send(color);
+});
+
 module.exports = router;
