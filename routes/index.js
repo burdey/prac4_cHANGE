@@ -16,7 +16,6 @@ router.get('/last.txt', function(req, res, next) {
 
 var timestamp="";
 var i=1;
-i++
 router.get('/log.html', function(req, res, next){
   if(i++ == 1){
     timestamp = new Date().toString();
