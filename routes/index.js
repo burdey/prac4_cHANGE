@@ -99,7 +99,7 @@ router.get('/first.html', function(req, res, next){
   }
 });
 
-router.get('/main.html', function(req, res){
+router.get('/main.html', function(req, res, next){
   if(!first){
     res.redirect('/first.html');
   }
