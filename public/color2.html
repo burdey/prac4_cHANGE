@@ -1,1 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>task4-2</title>
+    </head>
+    <body onload="color2()">
+    <h1 id="colorChange"></h1>
+    <button onClick="color2()">Click Me</button> 
+    <script>
+        var Co = document.getElementById("colorChange");
+        var xhttp = new XMLHttpRequest();
+        function color2() {
+            xhttp.onreadystatechange=function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    Co.innerHTML = this.responseText;
+                    Co.style.color = this.responseText;
+                }
+            };
+            xhttp.open("GET", "/color.txt", true);
+            xhttp.send();
+        }
+    </script>
+    </body>
+</html>
