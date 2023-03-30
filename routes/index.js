@@ -22,6 +22,7 @@ router.get('/color.html', function(req,res,next){
         <h1 id="color">innerText</h1>\
         <script>\
         var C = document.getElementById("color");\
+        var color_number = 0;\
         var color_number='+ color_number +';\
         if(color_number == 0){\
           C.innerText = "red";\
