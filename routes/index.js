@@ -25,20 +25,20 @@ router.get('/color.html', function(req,res,next){
         var color_number = 0;\
         var color_number='+ color_number +';\
         if(color_number == 0){\
-          C.innerText = "red";\
           C.style.color = "red";\
+          C.innerText = "red";\
         }\
         else if(color_number == 1){\
-          C.innerText = "yellow";\
           C.style.color = "yellow";\
+          C.innerText = "yellow";\
         }\
         else if(color_number == 2){\
-          C.innerText = "green";\
           C.style.color = "green";\
+          C.innerText = "green";\
         }\
         else if(color_number == 3){\
-          C.innerText = "blue";\
           C.style.color = "blue";\
+          C.innerText = "blue";\
         }\
         </script>\
       </body>\
