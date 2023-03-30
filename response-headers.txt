@@ -1,0 +1,16 @@
+server: nginx/1.14.0 (Ubuntu)
+date: Mon, 27 Mar 2023 05:56:38 GMT
+content-type: text/html; charset=utf-8
+content-length: 112668
+vary: Accept-Encoding
+strict-transport-security: max-age=15724800
+x-view-name: canonicalwebteam.templatefinder.templatefinder.template_finder
+x-clacks-overhead: GNU Terry Pratchett
+permissions-policy: interest-cohort=()
+cache-control: max-age=60, stale-while-revalidate=86400, stale-if-error=300
+x-content-type-options: NOSNIFF
+x-vcs-revision: 1679858043-38833f0
+x-request-id: 4ca29272775f4a6f48e49d38a3f1f47b
+link: <https://assets.ubuntu.com>; rel=preconnect; crossorigin, <https://assets.ubuntu.com>; rel=preconnect, <https://res.cloudinary.com>; rel=preconnect
+x-cache-status: HIT from content-cache-il3/0
+accept-ranges: bytes
