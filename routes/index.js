@@ -6,6 +6,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/user', function(req, res){
+  res.send(200);
+});
+router.get('/user/list', (req, res) => {
+  res.send('GET user list. ');
+});
+router.post('/user/add', (req, res) => {
+  res.send('Add new user. ')
+});
+
 router.get('/last.txt', function(req, res, next) {
   date = new Date().toString();
   res.send(date);
