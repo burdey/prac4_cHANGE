@@ -81,4 +81,38 @@ router.get('/color.txt', function(req, res){
   res.send(color);
 });
 
+var first = false;
+router.get('/first.html', function(req, res, next){
+  if(!first){
+    first = true;
+    res.send('<!DOCTYPE html>\
+    <html lang="en-us">\
+      <body>\
+        <h1 id="ha">Welcome</h1>\
+        <br/>\
+        <a href="/main.html"> MAIN </a>\
+      </body>\
+    </html>');
+  }
+  else{
+    res.redirect('/main.html');
+  }
+});
+
+router.get('/main.html', function(req, res){
+  if(!first){
+    res.redirect('/first.html');
+  }
+  else{
+    res.send('<!DOCTYPE html>\
+      <html lang="en-us">\
+        <body>\
+          <h1 id="ha">My main site</h1>\
+          <br/>\
+          <p>Go to First</p>\
+        </body>\
+      </html>'); 
+  }
+});
+
 module.exports = router;
