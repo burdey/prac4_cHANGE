@@ -11,6 +11,16 @@ router.get('/last.txt', function(req, res, next) {
   res.send(date);
 });
 
-
+var timestamp="";
+var i=1;
+router.get('/log.html', function(req, res){
+  if(i++ == 1){
+    timestamp = new Date().toString();
+  }
+  else{
+    timestamp = timestamp + "<br>" + (new Date().toString());
+    res.send(timestamp);
+  }
+});
 
 module.exports = router;
