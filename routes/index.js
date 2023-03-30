@@ -88,7 +88,7 @@ router.get('/first.html', function(req, res, next){
     res.send('<!DOCTYPE html>\
     <html lang="en-us">\
       <body>\
-        <h1 id="ha">Welcome</h1>\
+        <h1 id="first">Welcome</h1>\
         <br/>\
         <a href="/main.html"> MAIN </a>\
       </body>\
@@ -107,7 +107,7 @@ router.get('/main.html', function(req, res, next){
     res.send('<!DOCTYPE html>\
       <html lang="en-us">\
         <body>\
-          <h1 id="ha">My main site</h1>\
+          <h1 id="first">My main site</h1>\
           <br/>\
           <p>Go to First</p>\
         </body>\
