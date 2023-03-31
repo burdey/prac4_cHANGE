@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>task4-5</title>
+    </head>
+    <body onload="main2()">
+        <h1>Diverse System - AD:PIANO VIII -alter-</h1>
+        <div id="modal" class="modal">
+            <p>Sad Keyboard - AD:PIANO VIII -alter-</p>
+            <button onClick="Click()" onclass="click" name="click">Click me</button>
+        </div>
+        <br>
+        <div id="response"></div>
+        <script>
+            var modal = document.getElementById("modal");
+            var resp = document.getElementById("response");
+            var button = document.getElementsByClassName("click")[0];
+            var xhttp = new XMLHttpRequest();
+            function main2() {
+                xhttp.onreadystatechange=function() {
+                    if (this.readyState == 4 && this.status == 200){
+                        resp.innerHTML = this.responseText;
+                    }
+                    else if(this.readyState == 4 && this.status == 403){
+                        modal.style.display = "block";
+                    }
+                }
+                xhttp.open("GET", "/content.ajax", true);
+                xhttp.send();
+            };
+            function Click() { 
+                modal.style.display = "none";
+                xhttp.onreadystatechange=function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        getData();
+                    }
+                }
+                xhttp.open("GET", "/accept", true);
+                xhttp.send();  
+            };   
+        </script>
+    </body>
+</html>
