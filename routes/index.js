@@ -58,6 +58,8 @@ var i=1;
 router.get('/log.html', function(req, res, next){
     timestamp = timestamp + "<br>" + (new Date().toString());
     res.send(timestamp);
+    res.send(date1);
+    res.send(i);
 });
 
 router.use(express.static('public'));
