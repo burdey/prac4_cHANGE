@@ -117,4 +117,20 @@ router.get('/main.html', function(req, res, next){
   }
 });
 
+var accept = false; 
+router.get('/accept', function(req, res, next){
+  accept = true;
+  res.status(200).end();
+});
+
+router.get('/content.ajax', function(req, res, next){
+  if(!accept){ 
+    res.status(403).end();
+  }
+  else{
+    res.send("<p> Albireo </P> \n <p> Glimmer</P>");
+    res.status(200).end();
+  }
+});
+
 module.exports = router;
